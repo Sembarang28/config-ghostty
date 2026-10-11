@@ -1,0 +1,15 @@
+# ===== appearance =====
+theme = Catppuccin Mocha
+background-opacity = 0.65
+background-blur-radius = 15
+font-size = 14
+macos-option-as-alt = true
+window-padding-x = 8
+window-padding-y = 6
+
+# ===== Sample SSH Bash/Zsh Version =====
+# keybind = cmd+shift+1=text:\x15set -a; . ~/.config/ghostty/.env; set +a; if [ $S1_TYPE = password ]; then SSHPASS=${S1_PASS:-$(security find-generic-password -a $S1_USER -s ghostty-ssh-server1 -w)} sshpass -e ssh -o StrictHostKeyChecking=accept-new -p $S1_PORT $S1_USER@$S1_HOST; else ssh -i ${S1_KEY:-$HOME/.ssh/id_ed25519} -p $S1_PORT $S1_USER@$S1_HOST; fi\n
+
+# ===== Sample SSH Fish Version =====
+# keybind = cmd+shift+1=text:\x15bash -c 'set -a; . $HOME/.config/ghostty/.env; set +a; if [ "$S1_TYPE" = password ]; then SSHPASS=${S1_PASS:-$(security find-generic-password -a $S1_USER -s ghostty-ssh-server1 -w)} exec sshpass -e ssh -o StrictHostKeyChecking=accept-new -p $S1_PORT $S1_USER@$S1_HOST; else exec ssh -i ${S1_KEY:-$HOME/.ssh/id_ed25519} -p $S1_PORT $S1_USER@$S1_HOST; fi'\n
+
